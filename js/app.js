@@ -32,38 +32,38 @@ const citaObj = {
 
 
 
-// class Notificacion {
+class Notificacion {
 
-//     constructor({texto, tipo}) {
-//         this.texto = texto
-//         this.tipo = tipo
-//         this.mostrar()
-//     }
+    constructor({texto, tipo}) {
+        this.texto = texto
+        this.tipo = tipo
+        this.mostrar()
+    }
 
-//     mostrar() {
-//         // Crear la notificacion
-//         const alerta = document.createElement('DIV')
-//         alerta.classList.add('text-center', 'w-full', 'p-3', 'text-white', 'my-5', 'alert', 'uppercase', 'font-bold', 'text-sm')
+    mostrar() {
+        // Crear la notificacion
+        const alerta = document.createElement('DIV')
+        alerta.classList.add('text-center', 'w-full', 'p-3', 'text-white', 'my-5', 'alert', 'uppercase', 'font-bold', 'text-sm')
 
-//         // Eliminar alertas duplicadas
-//         const alertaPrevia = document.querySelector('.alert')
-//         alertaPrevia?.remove()
+        // Eliminar alertas duplicadas
+        const alertaPrevia = document.querySelector('.alert')
+        alertaPrevia?.remove()
 
-//         // Si es de tipo error, agrega una clase
-//         this.tipo === 'error' ? alerta.classList.add('bg-red-500') : alerta.classList.add('bg-green-500')
+        // Si es de tipo error, agrega una clase
+        this.tipo === 'error' ? alerta.classList.add('bg-red-500') : alerta.classList.add('bg-green-500')
 
-//         // Mensaje de error
-//         alerta.textContent = this.texto
+        // Mensaje de error
+        alerta.textContent = this.texto
 
-//         // Insertar en el DOM
-//         formulario.parentElement.insertBefore(alerta, formulario)
+        // Insertar en el DOM
+        formulario.parentElement.insertBefore(alerta, formulario)
 
-//         // Quitar después de 5 segundos
-//         setTimeout(() => {
-//             alerta.remove()
-//         }, 3000);
-//     }
-// }
+        // Quitar después de 5 segundos
+        setTimeout(() => {
+            alerta.remove()
+        }, 3000);
+    }
+}
 
 class AdminCitas {
     constructor() {
@@ -125,11 +125,11 @@ class AdminCitas {
             sintomas.innerHTML = `<span class="font-bold uppercase">Síntomas: </span> ${cita.sintomas}`;
 
             // Botones de Eliminar y editar
-            const btnEditar = document.createElement('button');
-            btnEditar.classList.add('py-2', 'px-10', 'bg-indigo-600', 'hover:bg-indigo-700', 'text-white', 'font-bold', 'uppercase', 'rounded-lg', 'flex', 'items-center', 'gap-2', 'btn-editar');
-            btnEditar.innerHTML = 'Editar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
-            const clone = structuredClone(cita)
-            btnEditar.onclick = () => cargarEdicion(clone)
+            // const btnEditar = document.createElement('button');
+            // btnEditar.classList.add('py-2', 'px-10', 'bg-indigo-600', 'hover:bg-indigo-700', 'text-white', 'font-bold', 'uppercase', 'rounded-lg', 'flex', 'items-center', 'gap-2', 'btn-editar');
+            // btnEditar.innerHTML = 'Editar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
+            // const clone = structuredClone(cita)
+            // btnEditar.onclick = () => cargarEdicion(clone)
 
             const btnEliminar = document.createElement('button')
             btnEliminar.classList.add('py-2', 'px-10', 'bg-red-600', 'hover:bg-red-700', 'text-white', 'font-bold', 'uppercase', 'rounded-lg', 'flex', 'items-center', 'gap-2');
